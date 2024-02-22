@@ -1,82 +1,119 @@
-<section id="calander">
-    <div class="container">
-    <div class="dropdown-menu d-block position-static p-2 mx-0 shadow rounded-3 w-340px" data-bs-theme="light">
-        <div class="d-grid gap-1">
-          <div class="cal">
-            <div class="cal-month">
-              <button class="btn cal-btn" type="button">
-                <svg class="bi" width="16" height="16"><use xlink:href="#arrow-left-short"></use></svg>
-              </button>
-              <strong class="cal-month-name">June</strong>
-              <select class="form-select cal-month-name d-none">
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option selected="" value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-              </select>
-              <button class="btn cal-btn" type="button">
-                <svg class="bi" width="16" height="16"><use xlink:href="#arrow-right-short"></use></svg>
-              </button>
-            </div>
-            <div class="cal-weekdays text-body-secondary">
-              <div class="cal-weekday">Sun</div>
-              <div class="cal-weekday">Mon</div>
-              <div class="cal-weekday">Tue</div>
-              <div class="cal-weekday">Wed</div>
-              <div class="cal-weekday">Thu</div>
-              <div class="cal-weekday">Fri</div>
-              <div class="cal-weekday">Sat</div>
-            </div>
-            <div class="cal-days">
-              <button class="btn cal-btn" disabled="" type="button">30</button>
-              <button class="btn cal-btn" disabled="" type="button">31</button>
-    
-              <button class="btn cal-btn" type="button">1</button>
-              <button class="btn cal-btn" type="button">2</button>
-              <button class="btn cal-btn" type="button">3</button>
-              <button class="btn cal-btn" type="button">4</button>
-              <button class="btn cal-btn" type="button">5</button>
-              <button class="btn cal-btn" type="button">6</button>
-              <button class="btn cal-btn" type="button">7</button>
-    
-              <button class="btn cal-btn" type="button">8</button>
-              <button class="btn cal-btn" type="button">9</button>
-              <button class="btn cal-btn" type="button">10</button>
-              <button class="btn cal-btn" type="button">11</button>
-              <button class="btn cal-btn" type="button">12</button>
-              <button class="btn cal-btn" type="button">13</button>
-              <button class="btn cal-btn" type="button">14</button>
-    
-              <button class="btn cal-btn" type="button">15</button>
-              <button class="btn cal-btn" type="button">16</button>
-              <button class="btn cal-btn" type="button">17</button>
-              <button class="btn cal-btn" type="button">18</button>
-              <button class="btn cal-btn" type="button">19</button>
-              <button class="btn cal-btn" type="button">20</button>
-              <button class="btn cal-btn" type="button">21</button>
-    
-              <button class="btn cal-btn" type="button">22</button>
-              <button class="btn cal-btn" type="button">23</button>
-              <button class="btn cal-btn" type="button">24</button>
-              <button class="btn cal-btn" type="button">25</button>
-              <button class="btn cal-btn" type="button">26</button>
-              <button class="btn cal-btn" type="button">27</button>
-              <button class="btn cal-btn" type="button">28</button>
-    
-              <button class="btn cal-btn" type="button">29</button>
-              <button class="btn cal-btn" type="button">30</button>
-              <button class="btn cal-btn" type="button">31</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Calendar 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Events calander</h2>
+				</div>
+			</div>
+			<div class="d-flex gap-2 justify-content-center py-2">
+				<span class="badge bg-primary-subtle border border-primary-subtle text-primary-emphasis rounded-pill">Primary</span>
+				<span class="badge bg-secondary-subtle border border-secondary-subtle text-secondary-emphasis rounded-pill">Secondary</span>
+				<span class="badge bg-success-subtle border border-success-subtle text-success-emphasis rounded-pill">Success</span>
+				<span class="badge bg-danger-subtle border border-danger-subtle text-danger-emphasis rounded-pill">Danger</span>
+				<span class="badge bg-warning-subtle border border-warning-subtle text-warning-emphasis rounded-pill">Warning</span>
+				<span class="badge bg-info-subtle border border-info-subtle text-info-emphasis rounded-pill">Info</span>
+				<span class="badge bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill">Light</span>
+				<span class="badge bg-dark-subtle border border-dark-subtle text-dark-emphasis rounded-pill">Dark</span>
+			  </div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="content w-100">
+				    <div class="calendar-container " >
+				      <div class="calendar"> 
+				        <div class="year-header"> 
+				          <span class="left-button fa fa-chevron-left" id="prev"> </span> 
+				          <span class="year" id="label"></span> 
+				          <span class="right-button fa fa-chevron-right" id="next"> </span>
+				        </div> 
+				        <table class="months-table w-100"> 
+				          <tbody>
+				            <tr class="months-row">
+				              <td class="month">Jan</td> 
+				              <td class="month">Feb</td> 
+				              <td class="month">Mar</td> 
+				              <td class="month">Apr</td> 
+				              <td class="month">May</td> 
+				              <td class="month">Jun</td> 
+				              <td class="month">Jul</td>
+				              <td class="month">Aug</td> 
+				              <td class="month">Sep</td> 
+				              <td class="month">Oct</td>          
+				              <td class="month">Nov</td>
+				              <td class="month">Dec</td>
+				            </tr>
+				          </tbody>
+				        </table> 
+				        
+				        <table class="days-table w-100"> 
+				          <td class="day">Sun</td> 
+				          <td class="day">Mon</td> 
+				          <td class="day">Tue</td> 
+				          <td class="day">Wed</td> 
+				          <td class="day">Thu</td> 
+				          <td class="day">Fri</td> 
+				          <td class="day">Sat</td>
+				        </table> 
+				        <div class="frame"> 
+				          <table class="dates-table w-100"> 
+			              <tbody class="tbody">             
+			              </tbody> 
+				          </table>
+				        </div> 
+				        <button class="button" id="add-button">Add Event</button>
+				      </div>
+				    </div>
+					
+				    <div class="events-container">
+				    </div>
+				    <div class="dialog" id="dialog">
+				        <h2 class="dialog-header"> Add New Event </h2>
+				        <form class="form" id="form">
+				          <div class="form-container my-0" align="center">
+				            <label class="form-label" id="valueFromMyButton" for="name">Client name</label>
+				            <input class="input" type="text" id="name" maxlength="36">
+				            <label class="form-label" id="valueFromMyButton" for="count">Phone number</label>
+				            <input class="input" type="number" id="count" min="0" max="1000000" maxlength="7">
+							<label class="form-label" id="valueFromMyButton" for="name">Event type</label>
+							<br>
+							<select name="types" id="types" class="form-select">
+								
+								
+							  </select>
+				            <br>
+							<br>
+				            <input type="button" value="Cancel" class="button" id="cancel-button">
+				            <input type="button" value="OK" class="button button-white" id="ok-button">
+				          </div>
+				        </form>
+				      </div>
+				  </div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="calanderJS/jquery.min.js"></script>
+  <script src="calanderJS/popper.js"></script>
+  <script src="calanderJS/bootstrap.min.js"></script>
+  <script src="calanderJS/main.js" type="module"></script>
+  
+
+	</body>
+</html>
+
