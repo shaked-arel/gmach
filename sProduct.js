@@ -31,4 +31,17 @@ if(url.includes("?id=")){
         console.log('The read failed: ' + errorObject.name);
       }); 
     }
+
+const minusBtn=document.getElementById("minus");
+let amountEl= document.getElementById("amount");
+const plusBtn=document.getElementById("plus");
+
+minusBtn.addEventListener("click",function(){
+  let currentamount=parseInt(amountEl.innerHTML)-1;
+  amountEl.innerHTML=currentamount;
+})
+plusBtn.addEventListener("click",function(){
+  let currentamount=parseInt(amountEl.innerHTML)+1;
+  amountEl.innerHTML=currentamount;
+})
     

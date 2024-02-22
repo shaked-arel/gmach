@@ -5,7 +5,6 @@ const appSetings={
     databaseURL:"https://gmach-da21b-default-rtdb.europe-west1.firebasedatabase.app/",
 }
 
-
 const app=initializeApp(appSetings);
 const database=getDatabase(app);
 const itemInDB=ref(database, "items");
@@ -77,21 +76,16 @@ function addToShopList(productId, productVal){
    div1.appendChild(image)
    div1.appendChild(div2)
    newEl.appendChild(div1)
+   newEl.addEventListener("click",function (){
+    var url= "./sProduct.html?id="+productId;
+    console.log(url);
+    location.href="./sProduct.html?id="+productId;
+   })
    
 
-  /* let newEl = document.createElement("li")
-    newEl.textContent = productVal 
-    newEl.id=productId   
-    newEl.addEventListener("dblclick",function(){
-        
-        let locationOfProduct= ref(database, `products/${productId}`)
-        remove(locationOfProduct)
-    })*/
-
-    ItemsList.append(newEl)
-
-   
+    ItemsList.append(newEl)  
 }
+
 
 function resetInputField(){
     inputField.value="";

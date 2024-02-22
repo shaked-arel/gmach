@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "gmach",
+			"path": "."
+		},
+		{
+			"name": "calendar-04",
+			"path": "../../Downloads/calendar-04"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gmach"
+	}
+}

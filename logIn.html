@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="mt-5 w-50 container">
+      <div class="p-5 p-md-5 border rounded-3 bg-body-tertiary">
+        <div class="form-floating mb-3">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="name@example.com"
+          />
+          <label for="email">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input
+            type="password"
+            class="form-control"
+            id="Password"
+            placeholder="Password"
+          />
+          <label for="Password">Password</label>
+          <div id="passwordHelpBlock" class="form-text">
+            Your password must be 8-20 characters long, contain letters and
+            numbers, and must not contain spaces, special characters, or emoji.
+          </div>
+        </div>
+
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me" /> Remember me
+          </label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" id="LogIn">Log In</button>
+        <hr class="my-4" />
+        <small class="text-body-secondary"
+          >don't have an account? <a href="./manage.html">Sign Up</a></small
+        >
+      </div>
+    </div>
+    <script src="./logIn.js" type="module"></script>
+  </body>
+</html>
